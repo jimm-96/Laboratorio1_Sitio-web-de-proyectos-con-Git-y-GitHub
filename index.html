@@ -15,247 +15,124 @@
 
 <body>
 
-    <!-- ========== VISTA PORTAFOLIO (vista principal) ========== -->
-    <div id="vista-portafolio">
+    <!-- ========== HEADER DEL SITIO ========== -->
+    <header class="site-header">
+        <h1 class="site-title">Portafolio de Proyectos</h1>
+        <p class="site-subtitle">Laboratorio 1 — Sitio web colaborativo con Git y GitHub</p>
+    </header>
 
-        <!-- ========== HEADER DEL SITIO ========== -->
-        <header class="site-header">
-            <h1 class="site-title">Portafolio de Proyectos</h1>
-            <p class="site-subtitle">Laboratorio 1 — Sitio web colaborativo con Git y GitHub</p>
-        </header>
+    <!-- ========== CONTENEDOR PRINCIPAL (3 columnas) ========== -->
+    <main class="team-container">
 
-        <!-- ========== CONTENEDOR PRINCIPAL (3 columnas) ========== -->
-        <main class="team-container">
+        <!-- ===== SECCIÓN: Maicol Aracena ===== -->
+        <section class="member-section" id="maicol">
+            <h2 class="member-name">Maicol Aracena Saavedra</h2>
 
-            <!-- ===== SECCIÓN: Maicol Aracena ===== -->
-            <section class="member-section" id="maicol">
-                <h2 class="member-name">Maicol Aracena Saavedra</h2>
+            <div class="projects-grid">
+                <!-- Tarjeta de proyecto (modelo para que cada integrante complete) -->
+                <article class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Nombre del Proyecto</h3>
+                    </div>
 
-                <div class="projects-grid">
-                    <!-- Tarjeta de proyecto (modelo para que cada integrante complete) -->
-                    <article class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">Nombre del Proyecto</h3>
+                    <img class="project-img" src="" alt="Vista previa del proyecto de Maicol">
+
+                    <div class="project-body">
+                        <p class="project-description">
+                            Descripción breve del proyecto trabajado.
+                        </p>
+
+                        <div class="tech-tags">
+                            <span class="tech-tag">Tecnología 1</span>
+                            <span class="tech-tag">Tecnología 2</span>
+                            <span class="tech-tag">Tecnología 3</span>
                         </div>
+                    </div>
 
-                        <img class="project-img" src="" alt="Vista previa del proyecto de Maicol">
-
-                        <div class="project-body">
-                            <p class="project-description">
-                                Descripción breve del proyecto trabajado.
-                            </p>
-
-                            <div class="tech-tags">
-                                <span class="tech-tag">Tecnología 1</span>
-                                <span class="tech-tag">Tecnología 2</span>
-                                <span class="tech-tag">Tecnología 3</span>
-                            </div>
-                        </div>
-
-                        <a class="project-link" href="#" onclick="mostrarProyecto('maicol-cv'); return false;">
-                            Ver Proyecto
-                        </a>
-                    </article>
-                </div>
-            </section>
-
-            <!-- ===== SECCIÓN: Joaquín Michea ===== -->
-            <section class="member-section" id="joaquin">
-                <h2 class="member-name">Joaquín Michea Michea</h2>
-
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">Nombre del Proyecto</h3>
-                        </div>
-
-                        <img class="project-img" src="" alt="Vista previa del proyecto de Joaquín">
-
-                        <div class="project-body">
-                            <p class="project-description">
-                                Descripción breve del proyecto trabajado.
-                            </p>
-
-                            <div class="tech-tags">
-                                <span class="tech-tag">Tecnología 1</span>
-                                <span class="tech-tag">Tecnología 2</span>
-                                <span class="tech-tag">Tecnología 3</span>
-                            </div>
-                        </div>
-
-                        <a class="project-link" href="#" target="_blank" rel="noopener noreferrer">
-                            Ver Proyecto
-                        </a>
-                    </article>
-                </div>
-            </section>
-
-            <!-- ===== SECCIÓN: Christian Salazar ===== -->
-            <section class="member-section" id="christian">
-                <h2 class="member-name">Christian Salazar Sandoval</h2>
-
-                <div class="projects-grid">
-                    <article class="project-card">
-                        <div class="project-header">
-                            <h3 class="project-title">Nombre del Proyecto</h3>
-                        </div>
-
-                        <img class="project-img" src="" alt="Vista previa del proyecto de Christian">
-
-                        <div class="project-body">
-                            <p class="project-description">
-                                Descripción breve del proyecto trabajado.
-                            </p>
-
-                            <div class="tech-tags">
-                                <span class="tech-tag">Tecnología 1</span>
-                                <span class="tech-tag">Tecnología 2</span>
-                                <span class="tech-tag">Tecnología 3</span>
-                            </div>
-                        </div>
-
-                        <a class="project-link" href="#" target="_blank" rel="noopener noreferrer">
-                            Ver Proyecto
-                        </a>
-                    </article>
-                </div>
-            </section>
-
-        </main>
-
-        <!-- ========== FOOTER ========== -->
-        <footer class="site-footer">
-            <p>&copy; 2026 — Laboratorio 1 | Maicol Aracena, Joaquín Michea, Christian Salazar</p>
-        </footer>
-
-    </div>
-
-    <!-- ========== VISTA PROYECTO: Maicol Aracena CV ========== -->
-    <div id="maicol-cv" class="vista-proyecto" style="display: none;">
-
-        <header class="site-header">
-            <a href="#" class="back-link" onclick="volverPortafolio(); return false;">← Volver al Portafolio</a>
-            <h1 class="site-title">Maicol Aracena Saavedra</h1>
-            <p class="site-subtitle">Proyecto CV — Laboratorio 1</p>
-        </header>
-
-        <main class="proyecto-contenido">
-            <div class="prueba-card">
-                <h2 class="prueba-titulo">prueba</h2>
-                <p class="prueba-descripcion">Esta página será el CV de Maicol Aracena. ¡Próximamente con todo el contenido!</p>
-                <span class="tech-tag">🚧 En construcción</span>
+                    <a class="project-link" href="#" target="_blank" rel="noopener noreferrer">
+                        Ver Proyecto
+                    </a>
+                </article>
             </div>
-        </main>
+        </section>
 
-        <footer class="site-footer">
-            <p>&copy; 2026 — Laboratorio 1 | Maicol Aracena, Joaquín Michea, Christian Salazar</p>
-        </footer>
+        <!-- ===== SECCIÓN: Joaquín Michea ===== -->
+        <section class="member-section" id="joaquin">
+            <h2 class="member-name">Joaquín Michea Michea</h2>
 
-    </div>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">AgenteInteligente_LentesGravitacionales</h3>
+                    </div>
 
-    <!-- ========== ESTILOS ADICIONALES PARA VISTAS DE PROYECTO ========== -->
-    <style>
-        /* Enlace de volver */
-        .back-link {
-            display: inline-block;
-            color: rgba(255, 255, 255, 0.85);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-            position: relative;
-            transition: color 0.2s ease;
-        }
+                    <img class="project-img" src="imagenes-joaquin/imagen-proyecto.PNG"
+                        alt="Vista previa del proyecto de Joaquín">
 
-        .back-link:hover {
-            color: #ffffff;
-        }
+                    <div class="project-body">
+                        <p class="project-description">
+                            Lens Sentinel AI es un software de escritorio diseñado para optimizar
+                            la detección y validación de lentes gravitacionales (anillos de Einstein)
+                            en grandes volúmenes de datos astronómicos.
+                        </p>
 
-        /* Contenido del proyecto */
-        .proyecto-contenido {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-            animation: fadeInUp 0.6s ease both;
-        }
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">CustomTkinter</span>
+                            <span class="tech-tag">Tensorflow</span>
+                        </div>
+                    </div>
 
-        /* Tarjeta de prueba */
-        .prueba-card {
-            background-color: var(--color-card);
-            border: 1px solid var(--color-border);
-            border-radius: var(--radius-lg);
-            padding: 3rem 2rem;
-            text-align: center;
-            box-shadow: var(--shadow-card);
-            transition:
-                transform var(--transition-med),
-                box-shadow var(--transition-med),
-                border-color var(--transition-med);
-        }
+                    <a class="project-link"
+                        href="https://github.com/jimm-96/AgenteInteligente_LentesGravitacionales.git" target="_blank"
+                        rel="noopener noreferrer">
+                        Ver Proyecto
+                    </a>
+                </article>
+            </div>
+        </section>
 
-        .prueba-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--color-accent);
-        }
+        <!-- ===== SECCIÓN: Christian Salazar ===== -->
+        <section class="member-section" id="christian">
+            <h2 class="member-name">Christian Salazar Sandoval</h2>
 
-        .prueba-titulo {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            margin-bottom: 1rem;
-        }
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Turnero Ucen</h3>
+                    </div>
 
-        .prueba-descripcion {
-            font-size: 1.1rem;
-            color: var(--color-text-secondary);
-            line-height: 1.65;
-            margin-bottom: 1.5rem;
-        }
+                    <img class="project-img" src="proyecto-christian/imagenes-repo-christian/turnero.png"
+                        alt="Vista previa del proyecto de Christian">
 
-        @media (max-width: 640px) {
-            .proyecto-contenido {
-                padding: 2rem 1rem;
-            }
+                    <div class="project-body">
+                        <p class="project-description">
+                            Se realizó un sistema actualizado de turnos para la Universidad Central Sede Coquimbo acorde
+                            a los requerimientos e insumos de la institución para procesos de Admisión y Matrículas.
+                        </p>
 
-            .prueba-titulo {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
+                        <div class="tech-tags">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">HTML5</span>
+                        </div>
+                    </div>
 
-    <!-- ========== JAVASCRIPT: Sistema de navegación entre vistas ========== -->
-    <script>
-        function mostrarProyecto(idVista) {
-            document.getElementById('vista-portafolio').style.display = 'none';
-            var vista = document.getElementById(idVista);
-            vista.style.display = 'block';
-            window.scrollTo(0, 0);
-            history.pushState({ vista: idVista }, '', '#' + idVista);
-        }
+                    <a class="project-link" href="proyecto-christian/proyecto-christian.html" target="_blank"
+                        rel="noopener noreferrer">
+                        Ver Proyecto
+                    </a>
+                </article>
+            </div>
+        </section>
 
-        function volverPortafolio() {
-            history.back();
-        }
+    </main>
 
-        // Manejar el botón atrás/adelante del navegador
-        window.addEventListener('popstate', function(e) {
-            if (e.state && e.state.vista) {
-                // Navegar a una vista de proyecto
-                document.getElementById('vista-portafolio').style.display = 'none';
-                var vistas = document.querySelectorAll('.vista-proyecto');
-                vistas.forEach(function(v) { v.style.display = 'none'; });
-                document.getElementById(e.state.vista).style.display = 'block';
-                window.scrollTo(0, 0);
-            } else {
-                // Volver al portafolio
-                var vistas = document.querySelectorAll('.vista-proyecto');
-                vistas.forEach(function(v) { v.style.display = 'none'; });
-                document.getElementById('vista-portafolio').style.display = 'block';
-                window.scrollTo(0, 0);
-            }
-        });
-    </script>
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+        <p>&copy; 2026 — Laboratorio 1 | Maicol Aracena, Joaquín Michea, Christian Salazar</p>
+    </footer>
 
 </body>
 
