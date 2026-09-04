@@ -231,16 +231,30 @@
             var vista = document.getElementById(idVista);
             vista.style.display = 'block';
             window.scrollTo(0, 0);
+            history.pushState({ vista: idVista }, '', '#' + idVista);
         }
 
         function volverPortafolio() {
-            var vistas = document.querySelectorAll('.vista-proyecto');
-            vistas.forEach(function(v) {
-                v.style.display = 'none';
-            });
-            document.getElementById('vista-portafolio').style.display = 'block';
-            window.scrollTo(0, 0);
+            history.back();
         }
+
+        // Manejar el botón atrás/adelante del navegador
+        window.addEventListener('popstate', function(e) {
+            if (e.state && e.state.vista) {
+                // Navegar a una vista de proyecto
+                document.getElementById('vista-portafolio').style.display = 'none';
+                var vistas = document.querySelectorAll('.vista-proyecto');
+                vistas.forEach(function(v) { v.style.display = 'none'; });
+                document.getElementById(e.state.vista).style.display = 'block';
+                window.scrollTo(0, 0);
+            } else {
+                // Volver al portafolio
+                var vistas = document.querySelectorAll('.vista-proyecto');
+                vistas.forEach(function(v) { v.style.display = 'none'; });
+                document.getElementById('vista-portafolio').style.display = 'block';
+                window.scrollTo(0, 0);
+            }
+        });
     </script>
 
 </body>
