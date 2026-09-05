@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Detalle del proyecto Sistema de Gestión Académica del Liceo José Santos Ossa, desarrollado por Maicol Aracena y Joaquín Michea.">
+    <title>Sistema Liceo - Maicol Aracena</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="proyecto.css">
+</head>
+
+<body>
+
+    <!-- Encabezado y navegación -->
+    <header class="project-header">
+        <nav>
+            <a href="../index.html" class="back-link">&larr; Volver al Portafolio</a>
+        </nav>
+        <h1 class="project-title">Sistema de Gestión Académica</h1>
+        <p class="project-subtitle">Sistema integral de administración escolar para el Liceo José Santos Ossa</p>
+    </header>
+
+    <!-- Contenedor principal del proyecto -->
+    <main class="project-layout">
+
+        <!-- Columna izquierda: Imagen con texto explicativo abajo -->
+        <section class="project-column-left">
+            <figure class="project-figure">
+                <img src="imagenes-maicol/sistema-liceo-2.jpg"
+                    alt="Vista del dashboard del Sistema de Gestión Académica del Liceo">
+                <figcaption>Dashboard del funcionario: panel central con acceso a todos los módulos de gestión
+                    académica, estudiantil y administrativa del sistema.</figcaption>
+            </figure>
+
+            <div class="image-description">
+                <p>
+                    El sistema fue desarrollado bajo una arquitectura MVC (Modelo-Vista-Controlador), con una base de
+                    datos relacional MySQL de 15 tablas, vistas SQL para reportes complejos, triggers de validación y
+                    auditoría automatizada.
+                </p>
+            </div>
+        </section>
+
+        <!-- Línea separadora -->
+        <hr class="project-divider">
+
+        <!-- Columna derecha -->
+        <section class="project-column-right">
+            <h2>Información del Proyecto</h2>
+
+            <article class="detail-block">
+                <h3>Descripción y Contexto</h3>
+                <p>
+                    Proyecto desarrollado para un ramo universitario. Consiste en un sistema web completo de gestión
+                    académica diseñado para el <strong>Liceo José Santos Ossa</strong>. El sistema permite administrar
+                    todo el ciclo escolar: desde la matrícula de estudiantes hasta el registro de notas, asistencia y
+                    generación de documentos oficiales.
+                </p>
+            </article>
+
+            <article class="detail-block">
+                <h3>Problema que Resuelve</h3>
+                <p>
+                    El liceo carecía de un sistema digitalizado para la gestión de sus procesos académicos y
+                    administrativos. El registro manual de notas, asistencias y matrículas generaba errores, pérdida de
+                    información y dificultad para acceder al historial de los estudiantes. Este sistema centraliza toda
+                    la información en una plataforma web accesible y organizada.
+                </p>
+            </article>
+
+            <article class="detail-block">
+                <h3>Funcionalidades Principales</h3>
+                <ul>
+                    <li><strong>Gestión de Estudiantes:</strong> Registro completo con datos personales, foto de perfil e
+                        historial académico consultable por año.</li>
+                    <li><strong>Gestión de Apoderados y Parentescos:</strong> Vinculación familiar con roles (titular,
+                        suplente, financiero) y permisos de retiro.</li>
+                    <li><strong>Matrículas:</strong> Inscripción por año académico y curso con estados (Cursando,
+                        Aprobado, Reprobado, Retirado).</li>
+                    <li><strong>Registro de Notas:</strong> Calificaciones por período con indicadores visuales
+                        (verde/rojo) y escala 1.0 a 7.0.</li>
+                    <li><strong>Control de Asistencia:</strong> Registro por semestre con cálculo automático de
+                        porcentaje y alertas por nivel.</li>
+                    <li><strong>Solicitud de Documentos:</strong> Sistema de solicitudes con generación automática de
+                        código único (SOL-AAAA-NNNN).</li>
+                    <li><strong>Sistema de Roles:</strong> Tres niveles de acceso — Administrador, Administrativo y
+                        Apoderado — con permisos diferenciados.</li>
+                    <li><strong>Auditoría:</strong> Registro automático de eliminaciones con trazabilidad de responsable
+                        y motivo mediante triggers.</li>
+                </ul>
+            </article>
+
+            <article class="detail-block">
+                <h3>Ficha Técnica</h3>
+                <ul>
+                    <li><strong>Desarrolladores:</strong> Maicol Aracena Saavedra y Joaquín Michea Michea</li>
+                    <li><strong>Institución destinataria:</strong> Liceo José Santos Ossa</li>
+                    <li><strong>Tipo de proyecto:</strong> Proyecto universitario</li>
+                    <li><strong>Arquitectura:</strong> MVC (Modelo-Vista-Controlador)</li>
+                    <li><strong>Base de datos:</strong> MySQL con 15 tablas, vistas SQL, triggers de validación y
+                        auditoría</li>
+                    <li><strong>Estado:</strong> Completado (Versión 1.0 - 2024)</li>
+                </ul>
+            </article>
+
+            <article class="detail-block">
+                <h3>Tecnologías Utilizadas</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">MVC</span>
+                </div>
+            </article>
+
+            <footer class="detail-footer">
+                <a href="../index.html#maicol" class="project-link">Volver a Mi Sección en el Portafolio</a>
+            </footer>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="site-footer">
+        <p>&copy; 2026 — Laboratorio 1 | Maicol Aracena Saavedra</p>
+    </footer>
+
+</body>
+
+</html>
