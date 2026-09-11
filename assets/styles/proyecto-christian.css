@@ -308,10 +308,14 @@ h1, h2, h3, h4 {
     color: #ffffff;
     background: linear-gradient(135deg, var(--color-accent), var(--color-primary));
     padding: 0.85rem 1.6rem;
+    margin: 0;
     border-radius: var(--radius-md);
     text-decoration: none;
     box-shadow: 0 3px 10px rgba(37, 99, 235, 0.28);
     transition: transform var(--transition), box-shadow var(--transition), opacity var(--transition);
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
 }
 
 .project-link:hover {
@@ -377,5 +381,7 @@ h1, h2, h3, h4 {
     .project-link {
         display: block;
         width: 100%;
+        margin: 0;
+        overflow-wrap: break-word;
     }
 }
