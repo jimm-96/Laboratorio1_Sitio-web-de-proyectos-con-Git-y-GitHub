@@ -26,15 +26,14 @@ const iconSun = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" 
     <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
 </svg>`;
 
-// Variable para rastrear el estado actual del tema
-let isDark = false;
+// Leer preferencia guardada en localStorage o del sistema operativo
+const savedTheme = localStorage.getItem('theme-maicol');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+let isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
 
-// Agregar addEventListener para reaccionar al evento 'click'
-darkModeBtn.addEventListener('click', function () {
-    isDark = !isDark;
-
-    // Modificar el DOM: agregar o quitar la clase 'dark-mode' en el <html>
-    if (isDark) {
+// Función reutilizable para aplicar el tema y actualizar el botón
+function applyTheme(dark) {
+    if (dark) {
         document.documentElement.classList.add('dark-mode');
         darkModeBtn.innerHTML = iconSun;
         darkModeBtn.setAttribute('aria-label', 'Cambiar a modo claro');
@@ -43,6 +42,19 @@ darkModeBtn.addEventListener('click', function () {
         darkModeBtn.innerHTML = iconMoon;
         darkModeBtn.setAttribute('aria-label', 'Cambiar a modo oscuro');
     }
+    // Guardar la preferencia en localStorage
+    localStorage.setItem('theme-maicol', dark ? 'dark' : 'light');
+}
+
+// Aplicar el tema guardado al cargar la página
+applyTheme(isDark);
+
+// Agregar addEventListener para reaccionar al evento 'click'
+darkModeBtn.addEventListener('click', function () {
+    isDark = !isDark;
+
+    // Modificar el DOM: agregar o quitar la clase 'dark-mode' en el <html>
+    applyTheme(isDark);
 
     // Micro-animación de feedback: escala + rotación al hacer click
     darkModeBtn.style.transform = 'scale(0.75) rotate(180deg)';
