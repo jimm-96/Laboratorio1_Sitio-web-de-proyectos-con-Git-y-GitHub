@@ -43,4 +43,10 @@ darkModeBtn.addEventListener('click', function () {
         darkModeBtn.innerHTML = iconMoon;
         darkModeBtn.setAttribute('aria-label', 'Cambiar a modo oscuro');
     }
+
+    // Micro-animación de feedback: escala + rotación al hacer click
+    darkModeBtn.style.transform = 'scale(0.75) rotate(180deg)';
+    setTimeout(function () {
+        darkModeBtn.style.transform = 'scale(1) rotate(0deg)';
+    }, 200);
 });
