@@ -27,9 +27,12 @@
 
         <!-- Columna izquierda: Imagen con texto explicativo abajo -->
         <section class="project-column-left">
-            <figure class="project-figure">
-                <img src="assets\imagenes\imagenes-repo-christian\turnero.png"
-                    alt="Pantalla de visualización del Turnero Ucen en sala de espera">
+            <figure class="project-figure" id="figura-turnero">
+                <div class="img-lightbox-wrapper">
+                    <img src="assets\imagenes\imagenes-repo-christian\turnero.png"
+                        alt="Pantalla de visualización del Turnero Ucen en sala de espera">
+                    <span class="img-zoom-badge">🔍 Click para ampliar</span>
+                </div>
                 <figcaption>Pantalla de visualización en sala: interfaz proyectada a los postulantes con el llamado de
                     número y módulo de atención asignado.</figcaption>
             </figure>
@@ -93,14 +96,28 @@
                 </ul>
             </article>
 
-            <article class="detail-block">
+            <article class="detail-block" id="detalles-desarrollo">
                 <h3>Detalles del desarrollo</h3>
                 <p>
                     Se usó XAMPP para gestionar el servidor web y la base de datos local.
                     Los contadores funcionan a través de un archivo .json donde se almacena el número actual de cada
                     tipo de trámite, acorde al alcance del proyecto.
-                    El sistema está diseñado para funcionar con múltiples pantallas de visualización en tiempo real.
                 </p>
+
+                <!-- Texto extra oculto por defecto -->
+                <div id="detalles-extra" style="display: none;">
+                    <p>
+                        El sistema está diseñado para funcionar con múltiples pantallas de visualización en tiempo real,
+                        permitiendo que cada módulo de atención opere de forma independiente. La comunicación entre el
+                        panel de operador y la pantalla pública se realiza mediante actualizaciones periódicas del archivo
+                        .json, sin necesidad de una base de datos relacional compleja.
+                    </p>
+                    
+                </div>
+
+                <button id="btn-leer-mas" class="project-link" style="margin-top: 0.75rem; cursor: pointer; border: none; font-size: 0.9rem; padding: 0.4rem 1rem;">
+                    Leer más
+                </button>
             </article>
 
             <article class="detail-block">
@@ -120,11 +137,19 @@
 
     </main>
 
+    <!-- ========== LIGHTBOX MODAL ========== -->
+    <div id="lightbox-modal" class="lightbox-overlay" style="display: none;">
+        <button id="lightbox-cerrar" class="lightbox-close" aria-label="Cerrar imagen ampliada">&times;</button>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Imagen ampliada del Turnero Ucen">
+    </div>
+
     <!-- Pie de página -->
     <footer class="site-footer">
         <p>&copy; 2026 — Laboratorio 1 | Christian Salazar Sandoval</p>
     </footer>
 
+    <!-- Scripts de interactividad -->
+    <script src="assets\js\script-christian.js" defer></script>
 </body>
 
 </html>
