@@ -332,3 +332,110 @@ h1, h2, h3 {
 .member-section:nth-child(1) { animation-delay: 0.1s; }
 .member-section:nth-child(2) { animation-delay: 0.25s; }
 .member-section:nth-child(3) { animation-delay: 0.4s; }
+
+/* ============================================================
+   BOTÓN DARK MODE TOGGLE
+   ============================================================ */
+#dark-mode-toggle {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transition:
+        transform var(--transition-med),
+        background var(--transition-med),
+        box-shadow var(--transition-med);
+}
+
+#dark-mode-toggle:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+    transform: scale(1.1);
+}
+
+#dark-mode-toggle:active {
+    transform: scale(0.92);
+}
+
+/* ============================================================
+   DARK MODE — Variables & Overrides
+   ============================================================ */
+.dark-mode {
+    --color-primary:        #60a5fa;
+    --color-accent:         #3b82f6;
+    --color-light-blue:     #1e293b;
+    --color-bg:             #0f172a;
+    --color-card:           #1e293b;
+    --color-text:           #e2e8f0;
+    --color-text-secondary: #94a3b8;
+    --color-border:         #334155;
+
+    --shadow-card:   0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+    --shadow-hover:  0 10px 25px rgba(59, 130, 246, 0.2), 0 4px 10px rgba(0, 0, 0, 0.25);
+    --shadow-header: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Header en dark mode */
+.dark-mode .site-header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #1e40af 100%);
+}
+
+/* Botón toggle en dark mode: color invertido */
+.dark-mode #dark-mode-toggle {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: rgba(148, 163, 184, 0.25);
+    color: #fbbf24;
+}
+
+.dark-mode #dark-mode-toggle:hover {
+    background: rgba(30, 41, 59, 0.85);
+    color: #fcd34d;
+}
+
+/* Links en dark mode */
+.dark-mode .project-link {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.35);
+}
+
+.dark-mode .project-link:hover {
+    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.5);
+}
+
+/* Tags en dark mode */
+.dark-mode .tech-tag {
+    background-color: #1e3a5f;
+    color: #93c5fd;
+}
+
+.dark-mode .tech-tag:hover {
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+
+/* Transición suave para todo el body */
+body,
+.site-header,
+.project-card,
+.site-footer,
+.tech-tag,
+.project-link {
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
